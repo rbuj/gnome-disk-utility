@@ -9,6 +9,7 @@
 
 #include "config.h"
 #include <glib/gi18n.h>
+#include <libnotify/notify.h>
 
 #include "gduapplication.h"
 
@@ -24,7 +25,9 @@ main (int argc, char *argv[])
   textdomain (GETTEXT_PACKAGE);
 
   app = gdu_application_new ();
+  notify_init ("org.mate.DiskUtility");
   status = g_application_run (G_APPLICATION (app), argc, argv);
+  notify_uninit ();
   g_object_unref (app);
 
   return status;

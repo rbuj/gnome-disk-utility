@@ -89,6 +89,7 @@ deps = [
   libgdu_dep,
   libhandy_dep,
   liblzma_dep,
+  libnotify_dep,
   libsecret_dep,
   m_dep,
   pwquality_dep,

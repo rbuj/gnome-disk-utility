@@ -11,6 +11,7 @@
 #include "config.h"
 
 #include <glib/gi18n.h>
+#include <libnotify/notify.h>
 
 #include "gduapplication.h"
 #include "gduwindow.h"
@@ -220,6 +221,17 @@ format_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)
     {
       gdu_utils_show_error (GTK_WINDOW (data->parent_window), _("Error formatting volume"), error);
       g_error_free (error);
+    }
+  else
+    {
+      NotifyNotification *notification;
+
+      notification = notify_notification_new (_("Format completed successfully"), _("The volume was formatted correctly, "
+                                                "make sure it was mounted correctly if automatic mounting is enabled on "
+                                                "your system."), "dialog-information");
+      notify_notification_set_hint_string (notification, "desktop-entry", "gnome-disks");
+      notify_notification_show (notification, NULL);
+      g_object_unref (notification);
     }
   create_format_data_free (data);
 }
