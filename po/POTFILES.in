@@ -2,7 +2,7 @@
 # Please keep this file sorted alphabetically.
 data/mate-disk-image-mounter.desktop.in
 data/mate-disk-image-writer.desktop.in
-data/org.gnome.Disks.gschema.xml
+data/org.mate.Disks.gschema.xml
 data/org.mate.DiskUtility.appdata.xml.in
 data/org.mate.DiskUtility.desktop.in
 src/disk-image-mounter/main.c
@@ -64,4 +64,3 @@ src/disks/ui/smart-dialog.ui
 src/disks/ui/unlock-device-dialog.ui
 src/disks/ui/volume-menu.ui
 src/libgdu/gduutils.c
-src/notify/gdusdmonitor.c

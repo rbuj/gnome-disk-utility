@@ -31,7 +31,7 @@ configure_file(
 )
 
 install_data(
-  'org.gnome.Disks.gschema.xml',
+  'org.mate.Disks.gschema.xml',
   install_dir: gio_schemasdir,
 )
 

@@ -7,13 +7,13 @@ configure the build directory:
 
 (skip if not needed:
 configure the build directory with options:
-  meson -D libsystemd=true|false -D gsd_plugin=true|false builddir
+  meson -D libsystemd=true|false builddir
 
 list the available options and their current values:
   meson configure builddir
 
 reconfigure a value:
-  meson configure builddir -D libsystemd=true|false -D gsd_plugin=true|false
+  meson configure builddir -D libsystemd=true|false
 )
 
 compile:

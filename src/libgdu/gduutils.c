@@ -91,7 +91,7 @@ gdu_utils_configure_file_chooser_for_disk_images (GtkFileChooser *file_chooser,
   gtk_file_chooser_set_local_only (file_chooser, FALSE);
 
   /* Get folder from GSettings, and default to the "Documents" folder if not set */
-  settings = g_settings_new ("org.gnome.Disks");
+  settings = g_settings_new ("org.mate.Disks");
   folder = g_settings_get_string (settings, "image-dir-uri");
   if (folder == NULL || strlen (folder) == 0)
     {
@@ -134,7 +134,7 @@ gdu_utils_file_chooser_for_disk_images_set_default_folder (GFile *folder)
   GSettings *settings;
 
   folder_uri = g_file_get_uri (folder);
-  settings = g_settings_new ("org.gnome.Disks");
+  settings = g_settings_new ("org.mate.Disks");
   g_settings_set_string (settings, "image-dir-uri", folder_uri);
   g_clear_object (&settings);
   g_free (folder_uri);

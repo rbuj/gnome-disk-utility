@@ -100,13 +100,6 @@ config_h.set('HAVE_LOGIND', enable_logind,
 subdir('src/libgdu')
 subdir('src/disks')
 subdir('src/disk-image-mounter')
-
-# *** gnome-settings-daemon plug-in ***
-enable_gsd_plugin = get_option('gsd_plugin')
-if enable_gsd_plugin
-  subdir('src/notify')
-endif
-
 subdir('data')
 subdir('po')
 
@@ -136,8 +129,7 @@ output += '        localedir:                  ' + gdu_localedir + '\n'
 output += '        mandir:                     ' + gdu_mandir + '\n'
 output += '        sysconfdir:                 ' + gdu_sysconfdir + '\n\n'
 output += '        Use logind:                 ' + logind + '\n'
-output += '        Build g-s-d plug-in:        ' + enable_gsd_plugin.to_string() + '\n\n'
 output += '        compiler:                   ' + cc.get_id() + '\n'
 output += '        cflags:                     ' + ' '.join(compiler_flags) + '\n\n'
-output += '        (Change with: meson configure BUILDDIR -D logind=libsystemd|libelogind|none -D gsd_plugin=true|false)\n\n'
+output += '        (Change with: meson configure BUILDDIR -D logind=libsystemd|libelogind|none\n\n'
 message(output)
