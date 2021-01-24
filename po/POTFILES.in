@@ -1,7 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/gnome-disk-image-mounter.desktop.in
-data/gnome-disk-image-writer.desktop.in
+data/mate-disk-image-mounter.desktop.in
+data/mate-disk-image-writer.desktop.in
 data/org.gnome.Disks.gschema.xml
 data/org.mate.DiskUtility.appdata.xml.in
 data/org.mate.DiskUtility.desktop.in

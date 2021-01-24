@@ -852,7 +852,7 @@ David Zeuthen (13):
       Don't warn if statvfs(3) fails
       Bump udisks2 required version to 2.0.91
       Add HighContrast to subdirs
-      Document the --format-device and --xid options for gnome-disks(1)
+      Document the --format-device and --xid options for mate-disks(1)
       Update NEWS for release
 
 Matthias Clasen (1):
@@ -1041,8 +1041,8 @@ David Zeuthen (179):
       Use ensure_unused() all disks before creating a RAID array on them
       Show list of affected devices in confirmation dialogs
       Use ensure_unused() on a loop device before trying to detach it
-      gnome-disks: add --block-device option
-      gnome-disks: update man page
+      mate-disks: add --block-device option
+      mate-disks: update man page
       Add gnome-settings-daemon plug-in to warn user on SMART failures
       Update POTFILES.{in,skip}
       Use ensure_unused() before deleting a partition
@@ -1221,7 +1221,7 @@ Changes since gnome-disk-utility 3.5.2:
 
 David Zeuthen (39):
       Post-release version bump to 3.5.3
-      about-dialog: use gnome-disks for the icon, not palimpsest
+      about-dialog: use mate-disks for the icon, not palimpsest
       Add back Benchmark dialog
       Show sample size and number of samples for benchmarks
       Add a settings dialog for power management and acoustic levels
@@ -1317,14 +1317,14 @@ Changes since gnome-disk-utility 3.4.1:
        gnome-disk-image-mounter: set no-part-scan option to TRUE
        Fix indentation in last commit
        gnome-disk-image-mounter: simplify command-line handling and accept any GIO URI
-       Rename palimpsest(1) to gnome-disks(1)
+       Rename palimpsest(1) to mate-disks(1)
        disk-image-mounter: if launched without args, show a file chooser
        disk-image-mounter: make the "Set up read-only mount" check-button work
        When restoring a disk image onto a bigger target, use info, not warning
        disk-image-mounter: use Loop.SetAutoclear() and treat error as non-fatal
        Also show Autoclear switch for free space on a partitioned loop device
        disk-image-mounter: support partitioned disk images
-       Add gnome-disks(1) and gnome-disk-image-mounter(1) man pages
+       Add mate-disks(1) and gnome-disk-image-mounter(1) man pages
        disk-image-mounter: add --wait-until-clear option
        disks: update man page a bit
        disk-image-mounter: Use UDISKS_CHECK_VERSION before using 1.97.0 API

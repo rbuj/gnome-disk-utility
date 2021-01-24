@@ -1,4 +1,4 @@
-.gnome-disk-utility-grid {
+.mate-disk-utility-grid {
 	border-width: 1px;
 	border-radius: 3px;
 	border-style: solid;
@@ -10,7 +10,7 @@
 	border-top-width: 1px;
 }
 
-.gnome-disk-utility-grid:selected {
+.mate-disk-utility-grid:selected {
 	background-image: -gtk-gradient(radial,
 	                              center center, 0,
 	                              center center, 1,
@@ -19,7 +19,7 @@
 	-adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
-.gnome-disk-utility-grid:selected:backdrop {
+.mate-disk-utility-grid:selected:backdrop {
 	background-image: -gtk-gradient(radial,
 	                              center center, 0,
 	                              center center, 1,

@@ -1,21 +1,21 @@
-# gnome-disk-utility
+# mate-disk-utility
 
-This gnome-disk-utility repository provides libraries and applications for
+This mate-disk-utility repository provides libraries and applications for
 dealing with storage devices.
 
-Development location: https://gitlab.gnome.org/GNOME/gnome-disk-utility
+Development location: https://gitlab.gnome.org/GNOME/mate-disk-utility
 
-## GNOME Disks
+## MATE Disks
 
 View, modify and configure disks and media
 
-Homepage: https://wiki.gnome.org/Apps/Disks
+Homepage: https://github.com/rbuj/mate-disk-utility
 
-## gnome-disk-image-mounter
+## mate-disk-image-mounter
 
 Attach and mount disk images
 
 ## gsd-disk-utility-notify
 
-gnome-disk-utility notification plugin for GNOME Settings Daemon
+mate-disk-utility notification plugin for MAATE Settings Daemon
 Disk health failure notification (SMART status)

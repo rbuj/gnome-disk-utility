@@ -1,6 +1,6 @@
 project(
-  'gnome-disk-utility', 'c',
-  version: '40.alpha',
+  'mate-disk-utility', 'c',
+  version: '1.25.0',
   license: 'GPL2.0',
   default_options: 'buildtype=debugoptimized',
   meson_version: '>= 0.50.0',
@@ -126,7 +126,7 @@ meson.add_install_script(
   gio_schemasdir,
 )
 
-output = '\n        gnome-disk-utility ' + gdu_version + '\n'
+output = '\n        mate-disk-utility ' + gdu_version + '\n'
 output += '        =========================\n\n'
 output += '        prefix:                     ' + gdu_prefix + '\n'
 output += '        bindir:                     ' + gdu_bindir + '\n'

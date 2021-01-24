@@ -1,4 +1,4 @@
-name = 'GNOME-Disks'
+name = 'MATE-Disks'
 
 enum_headers = files('gduenums.h')
 
@@ -67,7 +67,7 @@ resource_data = files(
 
 sources += gnome.compile_resources(
   'resources',
-  'gnome-disks.gresource.xml',
+  'mate-disks.gresource.xml',
   dependencies: resource_data,
   export: true,
 )
@@ -96,7 +96,7 @@ deps = [
 
 cflags = [
   '-DG_LOG_DOMAIN="@0@"'.format(name),
-  '-DGNOMELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
+  '-DMATELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
 ]
 
 if enable_logind

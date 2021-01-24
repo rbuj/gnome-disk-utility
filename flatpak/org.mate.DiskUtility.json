@@ -3,7 +3,7 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
-    "command" : "gnome-disks",
+    "command" : "mate-disks",
     "tags" : [
         "devel"
     ],
@@ -305,7 +305,7 @@
             ]
         },
         {
-            "name" : "gnome-disk-utility",
+            "name" : "mate-disk-utility",
             "buildsystem" : "meson",
             "builddir" : true,
             "config-opts" : [
@@ -314,7 +314,7 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/gnome-disk-utility.git",
+                    "url" : "https://gitlab.gnome.org/GNOME/mate-disk-utility.git",
                     "branch" : "master"
                 }
             ]

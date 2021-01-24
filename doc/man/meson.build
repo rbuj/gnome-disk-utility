@@ -7,8 +7,8 @@ xsltproc_cmd = [
 ]
 
 mans = [
-  'gnome-disks',
-  'gnome-disk-image-mounter',
+  'mate-disks',
+  'mate-disk-image-mounter',
 ]
 
 foreach man: mans

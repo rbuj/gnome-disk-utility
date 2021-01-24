@@ -1,25 +1,25 @@
-<refentry id="gnome-disks">
+<refentry id="mate-disks">
   <refentryinfo>
-    <title>gnome-disk-utility</title>
+    <title>mate-disk-utility</title>
     <date>March 2013</date>
     <productname>GNOME</productname>
   </refentryinfo>
 
   <refnamediv>
-    <refname>gnome-disks</refname>
+    <refname>mate-disks</refname>
     <refpurpose>the GNOME Disks application</refpurpose>
   </refnamediv>
 
   <refsynopsisdiv><title>SYNOPSIS</title>
     <cmdsynopsis>
-      <command>gnome-disks</command>
+      <command>mate-disks</command>
       <arg choice="opt">OPTIONS</arg>
     </cmdsynopsis>
   </refsynopsisdiv>
 
   <refsect1><title>DESCRIPTION</title>
     <para>
-      <command>gnome-disks</command> is the command to launch the
+      <command>mate-disks</command> is the command to launch the
       GNOME Disks application. Disks provides a way to inspect,
       format, partition and configure disks and block devices.
     </para>
@@ -27,10 +27,10 @@
       The Disks application is
       <emphasis>single-instance</emphasis>. What this means is that if
       the application is not already running when the
-      <command>gnome-disks</command> command is invoked, it will get
+      <command>mate-disks</command> command is invoked, it will get
       launched and the command invocation will block until the
       application exits. Otherwise the existing application instance
-      will be used and the <command>gnome-disks</command> command will
+      will be used and the <command>mate-disks</command> command will
       exit immediately.
     </para>
   </refsect1>
@@ -107,14 +107,14 @@
     <para>
       Please send bug reports to either the distribution bug tracker
       or the upstream bug tracker at
-      <ulink url="https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-disk-utility"/>.
+      <ulink url="https://bugzilla.gnome.org/enter_bug.cgi?product=mate-disk-utility"/>.
     </para>
   </refsect1>
 
   <refsect1>
     <title>SEE ALSO</title>
     <para>
-      <link linkend="gnome-disk-image-mounter.1"><citerefentry><refentrytitle>gnome-disk-image-mounter</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>,
+      <link linkend="mate-disk-image-mounter.1"><citerefentry><refentrytitle>mate-disk-image-mounter</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>,
       <citerefentry><refentrytitle>udisks</refentrytitle><manvolnum>8</manvolnum></citerefentry>
     </para>
   </refsect1>

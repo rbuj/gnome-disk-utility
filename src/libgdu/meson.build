@@ -24,7 +24,7 @@ endif
 
 cflags = [
   '-DG_LOG_DOMAIN="libgdu"',
-  '-DGNOMELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
+  '-DMATELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
 ]
 
 libgdu = static_library(

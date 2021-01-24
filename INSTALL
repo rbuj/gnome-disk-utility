@@ -21,7 +21,7 @@ compile:
   ninja
 
 run GNOME Disks:
-  builddir/src/disks/gnome-disks
+  builddir/src/disks/mate-disks
 
 to install to the configured prefix (defaults to system-wide /usr/local):
   cd builddir
@@ -56,8 +56,8 @@ Using Flatpak to build and run GNOME Disks and UDisks (both from web sources):
   # (the benefit is that resizing/formatting binaries are available)
   #
   # in a new terminal in the current folder:
-  flatpak-builder --run app flatpak/org.mate.DiskUtility.json gnome-disks
-  # or "LD_LIBRARY_PATH=app/files/lib/ app/files/bin/gnome-disks" to run without any sandboxing (see remark on UDisks)
+  flatpak-builder --run app flatpak/org.mate.DiskUtility.json mate-disks
+  # or "LD_LIBRARY_PATH=app/files/lib/ app/files/bin/mate-disks" to run without any sandboxing (see remark on UDisks)
 You can also install the resulting Flatpak in your system:
   flatpak-builder --force-clean --user --install app flatpak/org.mate.DiskUtility.json
   flatpak run org.mate.DiskUtility
@@ -78,7 +78,7 @@ will probably report strange bugs when running UDisks from
 an old distribution.
 
 Build a Flatpak app with your local source code changes:
-  flatpak-builder --force-clean --stop-at=gnome-disk-utility app flatpak/org.mate.DiskUtility.json gnome-disks
+  flatpak-builder --force-clean --stop-at=mate-disk-utility app flatpak/org.mate.DiskUtility.json mate-disks
   flatpak build app meson --prefix=/app _build
   flatpak build app ninja -C _build install
   flatpak-builder --finish-only --repo=repo app flatpak/org.mate.DiskUtility.json

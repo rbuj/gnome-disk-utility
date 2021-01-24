@@ -1195,7 +1195,7 @@ gdu_window_constructed (GObject *object)
   g_object_set (G_OBJECT (renderer),
                 "xalign", 1.0,
                 "stock-size", GTK_ICON_SIZE_MENU,
-                "icon-name", "gnome-disks-state-standby-symbolic",
+                "icon-name", "mate-disks-state-standby-symbolic",
                 NULL);
   gtk_tree_view_column_pack_end (column, renderer, FALSE);
 

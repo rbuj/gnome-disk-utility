@@ -1,18 +1,18 @@
-<refentry id="gnome-disk-image-mounter">
+<refentry id="mate-disk-image-mounter">
   <refentryinfo>
-    <title>gnome-disk-utility</title>
+    <title>mate-disk-utility</title>
     <date>March 2013</date>
     <productname>GNOME</productname>
   </refentryinfo>
 
   <refnamediv>
-    <refname>gnome-disk-image-mounter</refname>
+    <refname>mate-disk-image-mounter</refname>
     <refpurpose>Attach and mount disk images</refpurpose>
   </refnamediv>
 
   <refsynopsisdiv><title>SYNOPSIS</title>
     <cmdsynopsis>
-      <command>gnome-disk-image-mounter</command>
+      <command>mate-disk-image-mounter</command>
       <arg choice="opt">--writable</arg>
       <arg choice="opt" rep="repeat"><replaceable>URI</replaceable></arg>
     </cmdsynopsis>
@@ -20,7 +20,7 @@
 
   <refsect1><title>DESCRIPTION</title>
     <para>
-      <command>gnome-disk-image-mounter</command> can be used to set
+      <command>mate-disk-image-mounter</command> can be used to set
       up disk images. Both regular files and <emphasis>GVfs</emphasis>
       URIs (such as <filename>smb://filer/media/file.iso</filename>)
       can be used in the <parameter>URI</parameter> parameter. If no
@@ -28,7 +28,7 @@
       running, a graphical file chooser will be presented.
     </para>
     <para>
-      Note that <command>gnome-disk-image-mounter</command> will not
+      Note that <command>mate-disk-image-mounter</command> will not
       mount filesystems or unlock encrypted volumes in the disk image
       - this responsibility is left to the automounter in GNOME Shell
       to ensure that the same interactions happen as if the disk image
@@ -42,7 +42,7 @@
 
   <refsect1><title>RETURN VALUE</title>
     <para>
-      <command>gnome-disk-image-mounter</command> returns 0 on success
+      <command>mate-disk-image-mounter</command> returns 0 on success
       and non-zero on failure.
     </para>
   </refsect1>
@@ -59,7 +59,7 @@
     <para>
       Please send bug reports to either the distribution bug tracker
       or the upstream bug tracker at
-      <ulink url="https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-disk-utility"/>.
+      <ulink url="https://bugzilla.gnome.org/enter_bug.cgi?product=mate-disk-utility"/>.
     </para>
   </refsect1>
 
@@ -67,7 +67,7 @@
     <title>SEE ALSO</title>
     <para>
       <citerefentry><refentrytitle>gnome-shell</refentrytitle><manvolnum>1</manvolnum></citerefentry>,
-      <link linkend="gnome-disks.1"><citerefentry><refentrytitle>gnome-disks</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>,
+      <link linkend="mate-disks.1"><citerefentry><refentrytitle>mate-disks</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>,
       <citerefentry><refentrytitle>udisks</refentrytitle><manvolnum>8</manvolnum></citerefentry>,
       <citerefentry><refentrytitle>losetup</refentrytitle><manvolnum>8</manvolnum></citerefentry>
     </para>

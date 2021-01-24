@@ -808,7 +808,7 @@ render_element (GduVolumeGrid *grid,
 
   /* frames */
   gtk_style_context_save (context);
-  gtk_style_context_add_class (context, "gnome-disk-utility-grid");
+  gtk_style_context_add_class (context, "mate-disk-utility-grid");
   gtk_style_context_get_border (context, state, &border);
   sides = GTK_JUNCTION_NONE;
   if (!(element->edge_flags & GRID_EDGE_TOP))

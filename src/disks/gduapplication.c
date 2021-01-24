@@ -350,7 +350,7 @@ about_activated (GSimpleAction *action,
    *              The second %s is the version of the running udisks daemon (for example "2.0.90").
    *              The third, fourth and fifth %d are the major, minor and micro versions of libudisks2 that was used when compiling the Disks application (for example 2, 0 and 90).
    */
-  s = g_strdup_printf (_("gnome-disk-utility %s\nUDisks %s (built against %d.%d.%d)"),
+  s = g_strdup_printf (_("mate-disk-utility %s\nUDisks %s (built against %d.%d.%d)"),
                        PACKAGE_VERSION,
                        udisks_manager_get_version (udisks_client_get_manager (app->client)),
                        UDISKS_MAJOR_VERSION, UDISKS_MINOR_VERSION, UDISKS_MICRO_VERSION);

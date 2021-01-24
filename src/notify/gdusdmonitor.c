@@ -256,9 +256,9 @@ on_examine_action_clicked (NotifyNotification  *notification,
     }
 
   if (device_file != NULL)
-    command_line = g_strdup_printf ("gnome-disks --block-device %s", device_file);
+    command_line = g_strdup_printf ("mate-disks --block-device %s", device_file);
   else
-    command_line = g_strdup_printf ("gnome-disks");
+    command_line = g_strdup_printf ("mate-disks");
 
 
   app_info = g_app_info_create_from_commandline (command_line,
@@ -267,7 +267,7 @@ on_examine_action_clicked (NotifyNotification  *notification,
                                                  NULL);
   if (!g_app_info_launch (app_info, NULL, NULL, &error))
     {
-      g_warning ("Error launching gnome-disks: %s (%s, %d)",
+      g_warning ("Error launching mate-disks: %s (%s, %d)",
                  error->message, g_quark_to_string (error->domain), error->code);
       g_clear_error (&error);
     }
@@ -297,7 +297,7 @@ update_notification (GduSdMonitor        *monitor,
           *notification = notify_notification_new (title, text, icon_name);
           notify_notification_set_urgency (*notification, NOTIFY_URGENCY_CRITICAL);
           notify_notification_set_timeout (*notification, NOTIFY_EXPIRES_NEVER);
-          notify_notification_set_hint_string (*notification, "desktop-entry", "gnome-disks");
+          notify_notification_set_hint_string (*notification, "desktop-entry", "mate-disks");
           notify_notification_add_action (*notification,
                                           action,
                                           action_label,
@@ -356,7 +356,7 @@ update (GduSdMonitor *monitor)
                        C_("notify-smart", "Hard Disk Problems Detected"),
                        /* Translators: This is used as the text of the SMART failure notification */
                        C_("notify-smart", "A hard disk is likely to fail soon."),
-                       "gnome-disks",
+                       "mate-disks",
                        "examine-smart",
                        /* Translators: Text for button in SMART failure notification */
                        C_("notify-smart", "Examine"));

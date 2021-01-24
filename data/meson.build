@@ -5,8 +5,8 @@ install_subdir(
 
 desktops = [
   'org.mate.DiskUtility.desktop',
-  'gnome-disk-image-mounter.desktop',
-  'gnome-disk-image-writer.desktop',
+  'mate-disk-image-mounter.desktop',
+  'mate-disk-image-writer.desktop',
 ]
 
 foreach desktop: desktops

@@ -1,4 +1,4 @@
-name = 'gnome-disk-image-mounter'
+name = 'mate-disk-image-mounter'
 
 deps = [
   gio_unix_dep,
@@ -7,7 +7,7 @@ deps = [
 
 cflags = [
   '-DG_LOG_DOMAIN="@0@"'.format(name),
-  '-DGNOMELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
+  '-DMATELOCALEDIR="@0@"'.format(gdu_prefix / gdu_localedir),
 ]
 
 executable(
