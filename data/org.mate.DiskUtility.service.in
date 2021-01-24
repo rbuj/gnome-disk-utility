@@ -1,3 +1,3 @@
 [D-BUS Service]
-Name=org.gnome.DiskUtility
+Name=org.mate.DiskUtility
 Exec=@bindir@/gnome-disks --gapplication-service

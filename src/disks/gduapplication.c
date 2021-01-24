@@ -459,7 +459,7 @@ GApplication *
 gdu_application_new (void)
 {
   return G_APPLICATION (g_object_new (GDU_TYPE_APPLICATION,
-                                      "application-id", "org.gnome.DiskUtility",
+                                      "application-id", "org.mate.DiskUtility",
                                       "flags", G_APPLICATION_HANDLES_COMMAND_LINE,
                                       NULL));
 }

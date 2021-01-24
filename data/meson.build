@@ -4,7 +4,7 @@ install_subdir(
 )
 
 desktops = [
-  'org.gnome.DiskUtility.desktop',
+  'org.mate.DiskUtility.desktop',
   'gnome-disk-image-mounter.desktop',
   'gnome-disk-image-writer.desktop',
 ]
@@ -23,7 +23,7 @@ endforeach
 
 
 configure_file(
-  input: 'org.gnome.DiskUtility.service.in',
+  input: 'org.mate.DiskUtility.service.in',
   output: '@BASENAME@',
   configuration: {'bindir': gdu_prefix / gdu_bindir},
   install: true,
@@ -35,7 +35,7 @@ install_data(
   install_dir: gio_schemasdir,
 )
 
-info = 'org.gnome.DiskUtility.appdata.xml'
+info = 'org.mate.DiskUtility.appdata.xml'
 
 i18n.merge_file(
   info,

@@ -48,7 +48,7 @@ Using Flatpak to build and run GNOME Disks and UDisks (both from web sources):
   flatpak --user remote-add --if-not-exists gnome-nightly https://sdk.gnome.org/gnome-nightly.flatpakrepo
   flatpak --user install gnome-nightly org.gnome.Platform//master org.gnome.Sdk//master
   # build GNOME Disks and all dependencies
-  flatpak-builder app flatpak/org.gnome.DiskUtility.json
+  flatpak-builder app flatpak/org.mate.DiskUtility.json
   # now run UDisks as system service, replacing your system's instance
   sudo bwrap --tmpfs / --proc /proc --bind /sys /sys --dev-bind /dev /dev --dir /tmp --ro-bind ~/.local/share/flatpak/runtime/org.gnome.Platform/x86_64/master/active/files /usr --bind /etc /etc --bind /var /var --bind /run /run --symlink usr/lib64 /lib64 --ro-bind app/files /app --chdir / --die-with-parent /app/libexec/udisks2/udisksd -r
   # or "sudo LD_LIBRARY_PATH=app/files/lib/ app/files/libexec/udisks2/udisksd -r" to run without any sandboxing
@@ -56,13 +56,13 @@ Using Flatpak to build and run GNOME Disks and UDisks (both from web sources):
   # (the benefit is that resizing/formatting binaries are available)
   #
   # in a new terminal in the current folder:
-  flatpak-builder --run app flatpak/org.gnome.DiskUtility.json gnome-disks
+  flatpak-builder --run app flatpak/org.mate.DiskUtility.json gnome-disks
   # or "LD_LIBRARY_PATH=app/files/lib/ app/files/bin/gnome-disks" to run without any sandboxing (see remark on UDisks)
 You can also install the resulting Flatpak in your system:
-  flatpak-builder --force-clean --user --install app flatpak/org.gnome.DiskUtility.json
-  flatpak run org.gnome.DiskUtility
+  flatpak-builder --force-clean --user --install app flatpak/org.mate.DiskUtility.json
+  flatpak run org.mate.DiskUtility
   # and uninstall it when it's not needed anymore:
-  flatpak --user uninstall org.gnome.DiskUtility
+  flatpak --user uninstall org.mate.DiskUtility
 
 This runs/installs GNOME Disks built against UDisks and libblockdev from git
 but if you do not start the new udisksd with the bwrap trick,
@@ -78,27 +78,27 @@ will probably report strange bugs when running UDisks from
 an old distribution.
 
 Build a Flatpak app with your local source code changes:
-  flatpak-builder --force-clean --stop-at=gnome-disk-utility app flatpak/org.gnome.DiskUtility.json gnome-disks
+  flatpak-builder --force-clean --stop-at=gnome-disk-utility app flatpak/org.mate.DiskUtility.json gnome-disks
   flatpak build app meson --prefix=/app _build
   flatpak build app ninja -C _build install
-  flatpak-builder --finish-only --repo=repo app flatpak/org.gnome.DiskUtility.json
+  flatpak-builder --finish-only --repo=repo app flatpak/org.mate.DiskUtility.json
   # Now you can already run it the same way as above (flatpak-builder --run app …, and restart UDisks through bwrap)
   # or you can continue to do the following step to create a Flatpak bundle.
-  flatpak build-bundle repo org.gnome.DiskUtility.flatpak --runtime-repo=https://sdk.gnome.org/gnome-nightly.flatpakrepo org.gnome.DiskUtility
-  # Install the resulting org.gnome.DiskUtility.flatpak file:
-  flatpak --user install org.gnome.DiskUtility.flatpak
+  flatpak build-bundle repo org.mate.DiskUtility.flatpak --runtime-repo=https://sdk.gnome.org/gnome-nightly.flatpakrepo org.mate.DiskUtility
+  # Install the resulting org.mate.DiskUtility.flatpak file:
+  flatpak --user install org.mate.DiskUtility.flatpak
   # Finally, run the app:
-  flatpak run org.gnome.DiskUtility
+  flatpak run org.mate.DiskUtility
   # and uninstall it when you are done:
-  flatpak --user uninstall org.gnome.DiskUtility
+  flatpak --user uninstall org.mate.DiskUtility
 
 If you want to test things in your own development branches of UDisks or libblockdev,
 you need to change the Flatpak manifest and point it to your repository/branch.
 Here an example for the temporary change you need to do for libblockdev:
-diff --git a/flatpak/org.gnome.DiskUtility.json b/flatpak/org.gnome.DiskUtility.json
+diff --git a/flatpak/org.mate.DiskUtility.json b/flatpak/org.mate.DiskUtility.json
 index 2f89e2e3..16a20deb 100644
---- a/flatpak/org.gnome.DiskUtility.json
-+++ b/flatpak/org.gnome.DiskUtility.json
+--- a/flatpak/org.mate.DiskUtility.json
++++ b/flatpak/org.mate.DiskUtility.json
 @@ -189,7 +189,8 @@
              "sources" : [
                  {
