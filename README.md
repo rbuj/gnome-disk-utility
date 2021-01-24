@@ -17,5 +17,5 @@ Attach and mount disk images
 
 ## gsd-disk-utility-notify
 
-mate-disk-utility notification plugin for MAATE Settings Daemon
+mate-disk-utility notification plugin for MATE Settings Daemon
 Disk health failure notification (SMART status)
