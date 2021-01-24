@@ -99,7 +99,6 @@ config_h.set('HAVE_LOGIND', enable_logind,
 
 subdir('src/libgdu')
 subdir('src/disks')
-subdir('src/disk-image-mounter')
 subdir('data')
 subdir('po')
 

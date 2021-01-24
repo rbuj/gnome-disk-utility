@@ -110,12 +110,4 @@
       <ulink url="https://bugzilla.gnome.org/enter_bug.cgi?product=mate-disk-utility"/>.
     </para>
   </refsect1>
-
-  <refsect1>
-    <title>SEE ALSO</title>
-    <para>
-      <link linkend="mate-disk-image-mounter.1"><citerefentry><refentrytitle>mate-disk-image-mounter</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>,
-      <citerefentry><refentrytitle>udisks</refentrytitle><manvolnum>8</manvolnum></citerefentry>
-    </para>
-  </refsect1>
 </refentry>

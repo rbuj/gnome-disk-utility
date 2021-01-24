@@ -10,7 +10,3 @@ Development location: https://gitlab.gnome.org/GNOME/mate-disk-utility
 View, modify and configure disks and media
 
 Homepage: https://github.com/rbuj/mate-disk-utility
-
-## mate-disk-image-mounter
-
-Attach and mount disk images

@@ -1,11 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/mate-disk-image-mounter.desktop.in
 data/mate-disk-image-writer.desktop.in
 data/org.mate.Disks.gschema.xml
 data/org.mate.DiskUtility.appdata.xml.in
 data/org.mate.DiskUtility.desktop.in
-src/disk-image-mounter/main.c
 src/disks/gduapplication.c
 src/disks/gduatasmartdialog.c
 src/disks/gdubenchmarkdialog.c

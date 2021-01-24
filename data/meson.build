@@ -5,7 +5,6 @@ install_subdir(
 
 desktops = [
   'org.mate.DiskUtility.desktop',
-  'mate-disk-image-mounter.desktop',
   'mate-disk-image-writer.desktop',
 ]
 

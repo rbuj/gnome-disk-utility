@@ -8,7 +8,6 @@ xsltproc_cmd = [
 
 mans = [
   'mate-disks',
-  'mate-disk-image-mounter',
 ]
 
 foreach man: mans
