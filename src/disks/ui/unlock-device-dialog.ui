@@ -1,26 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.22"/>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">process-stop</property>
+  </object>
   <object class="GtkDialog" id="unlock-device-dialog">
-    <property name="width_request">400</property>
-    <property name="can_focus">False</property>
-    <property name="border_width">12</property>
+    <property name="width-request">400</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">12</property>
     <property name="title" translatable="yes">Enter passphrase to unlock</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
-    <property name="destroy_with_parent">True</property>
-    <property name="type_hint">dialog</property>
+    <property name="destroy-with-parent">True</property>
+    <property name="type-hint">dialog</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox5">
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
+        <property name="margin-start">20</property>
+        <property name="margin-end">20</property>
         <property name="orientation">vertical</property>
         <property name="spacing">12</property>
-        <property name="margin_left">20</property>
-        <property name="margin_right">20</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="dialog-action_area5">
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
+            <child>
+              <object class="GtkButton" id="button5">
+                <property name="label" translatable="yes">_Cancel</property>
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
+                <property name="image">image1</property>
+                <property name="use-underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="unlock-device-unlock-button">
+                <property name="label" translatable="yes">_Unlock</property>
+                <property name="visible">True</property>
+                <property name="sensitive">False</property>
+                <property name="can-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="receives-default">True</property>
+                <property name="use-underline">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="pack-type">end</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
         <child>
           <object class="GtkBox" id="infobar-vbox">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
               <placeholder/>
@@ -34,14 +83,13 @@
         </child>
         <child>
           <object class="GtkLabel" id="unknown-crypto-label">
-            <property name="visible">False</property>
-            <property name="no_show_all">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_bottom">5</property>
+            <property name="can-focus">False</property>
+            <property name="no-show-all">True</property>
+            <property name="margin-bottom">5</property>
             <property name="label" translatable="yes">This volume might be a VeraCrypt volume as it contains random data.</property>
             <property name="wrap">True</property>
-            <property name="width_chars">30</property>
-            <property name="max_width_chars">30</property>
+            <property name="width-chars">30</property>
+            <property name="max-width-chars">30</property>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -50,182 +98,195 @@
           </packing>
         </child>
         <child>
+          <!-- n-columns=3 n-rows=5 -->
           <object class="GtkGrid" id="unlock-device-grid">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="row_spacing">6</property>
-            <property name="column_spacing">10</property>
+            <property name="can-focus">False</property>
+            <property name="row-spacing">6</property>
+            <property name="column-spacing">10</property>
             <child>
               <object class="GtkLabel" id="label9">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="xalign">1</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">_Passphrase</property>
-                <property name="use_underline">True</property>
-                <property name="mnemonic_widget">unlock-device-passphrase-entry</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">unlock-device-passphrase-entry</property>
+                <property name="xalign">1</property>
                 <style>
                   <class name="dim-label"/>
                 </style>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="unlock-device-passphrase-entry">
-                <property name="placeholder-text" translatable="yes">If specified</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="visibility">False</property>
-                <property name="invisible_char">•</property>
-                <property name="activates_default">True</property>
-                <property name="invisible_char_set">True</property>
+                <property name="invisible-char">•</property>
+                <property name="activates-default">True</property>
+                <property name="placeholder-text" translatable="yes">If specified</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkCheckButton" id="unlock-device-show-passphrase-check-button">
                 <property name="label" translatable="yes">Sho_w passphrase</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="use_underline">True</property>
-                <property name="xalign">0</property>
-                <property name="draw_indicator">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">False</property>
+                <property name="halign">start</property>
+                <property name="use-underline">True</property>
+                <property name="draw-indicator">True</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">1</property>
-                <property name="width">1</property>
-                <property name="height">1</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="unlock-device-volume-type-label">
-                <property name="visible">False</property>
-                <property name="no_show_all">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
+                <property name="no-show-all">True</property>
                 <property name="label" translatable="yes">Volume type</property>
-                <property name="use_underline">True</property>
+                <property name="use-underline">True</property>
                 <property name="xalign">1</property>
                 <style>
                   <class name="dim-label"/>
                 </style>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkBox" id="unlock-device-volume-type-box">
+                <property name="can-focus">False</property>
+                <property name="margin-top">3</property>
+                <property name="margin-bottom">3</property>
                 <property name="spacing">10</property>
-                <property name="margin_top">3</property>
-                <property name="margin_bottom">3</property>
                 <child>
                   <object class="GtkCheckButton" id="unlock-device-tcrypt-hidden-check-button">
                     <property name="label" translatable="yes">_Hidden</property>
-                    <property name="tooltip_markup" translatable="yes">Instead of unlocking this volume, attempt to unlock a secondary volume hidden inside.</property>
-                    <property name="visible">False</property>
-                    <property name="no_show_all">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">False</property>
-                    <property name="use_underline">True</property>
-                    <property name="xalign">0</property>
-                    <property name="draw_indicator">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">False</property>
+                    <property name="no-show-all">True</property>
+                    <property name="tooltip-markup" translatable="yes">Instead of unlocking this volume, attempt to unlock a secondary volume hidden inside.</property>
+                    <property name="halign">start</property>
+                    <property name="use-underline">True</property>
+                    <property name="draw-indicator">True</property>
                   </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="unlock-device-tcrypt-system-check-button">
                     <property name="label" translatable="yes">Windows _system</property>
-                    <property name="tooltip_markup" translatable="yes">Unlock an encrypted Windows system partition or drive.</property>
-                    <property name="visible">False</property>
-                    <property name="no_show_all">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">False</property>
-                    <property name="use_underline">True</property>
-                    <property name="xalign">0</property>
-                    <property name="draw_indicator">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">False</property>
+                    <property name="no-show-all">True</property>
+                    <property name="tooltip-markup" translatable="yes">Unlock an encrypted Windows system partition or drive.</property>
+                    <property name="halign">start</property>
+                    <property name="use-underline">True</property>
+                    <property name="draw-indicator">True</property>
                   </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
                 </child>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">2</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="unlock-device-pim-label">
-                <property name="visible">False</property>
-                <property name="no_show_all">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
+                <property name="no-show-all">True</property>
                 <property name="label" translatable="yes">PI_M</property>
-                <property name="use_underline">True</property>
-                <property name="mnemonic_widget">unlock-device-pim-entry</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">unlock-device-pim-entry</property>
                 <property name="xalign">1</property>
                 <style>
                   <class name="dim-label"/>
                 </style>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkEntry" id="unlock-device-pim-entry">
-                <property name="placeholder-text" translatable="yes">If specified</property>
-                <property name="tooltip_markup" translatable="yes">If set, the VeraCrypt PIM (Personal Iterations Multiplier) numeric value to use for this volume.</property>
-                <property name="visible">False</property>
-                <property name="no_show_all">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
+                <property name="no-show-all">True</property>
+                <property name="tooltip-markup" translatable="yes">If set, the VeraCrypt PIM (Personal Iterations Multiplier) numeric value to use for this volume.</property>
                 <property name="hexpand">True</property>
-                <property name="activates_default">True</property>
+                <property name="activates-default">True</property>
+                <property name="placeholder-text" translatable="yes">If specified</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">3</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">3</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="unlock-device-keyfiles-label">
-                <property name="visible">False</property>
-                <property name="no_show_all">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
+                <property name="no-show-all">True</property>
                 <property name="label" translatable="yes">_Keyfiles</property>
-                <property name="use_underline">True</property>
-                <property name="mnemonic_widget">unlock-device-tcrypt-keyfile-chooser-button</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">unlock-device-tcrypt-keyfile-chooser-button</property>
                 <property name="xalign">1</property>
                 <style>
                   <class name="dim-label"/>
                 </style>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">4</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">4</property>
               </packing>
             </child>
             <child>
               <object class="GtkFileChooserButton" id="unlock-device-tcrypt-keyfile-chooser-button">
+                <property name="can-focus">True</property>
+                <property name="no-show-all">True</property>
+                <property name="tooltip-markup" translatable="yes">Select a keyfile to unlock this volume</property>
                 <property name="title" translatable="yes">Select a Keyfile</property>
-                <property name="visible">False</property>
-                <property name="tooltip_markup" translatable="yes">Select a keyfile to unlock this volume</property>
-                <property name="no_show_all">True</property>
-                <property name="can_focus">True</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">4</property>
+                <property name="left-attach">1</property>
+                <property name="top-attach">4</property>
               </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
             </child>
             <child>
               <placeholder/>
@@ -235,48 +296,6 @@
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
-          </packing>
-        </child>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox" id="dialog-action_area5">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="button5">
-                <property name="label">gtk-cancel</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="unlock-device-unlock-button">
-                <property name="label" translatable="yes">_Unlock</property>
-                <property name="visible">True</property>
-                <property name="sensitive">False</property>
-                <property name="can_focus">True</property>
-                <property name="can_default">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_underline">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-            <property name="position">3</property>
           </packing>
         </child>
       </object>
