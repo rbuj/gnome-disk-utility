@@ -19,7 +19,6 @@
     <property name="title" translatable="yes">Resize Volume</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
-    <property name="use-header-bar">1</property>
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
