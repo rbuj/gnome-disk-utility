@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Disk Image Writer
+Name=MATE Disk Image Writer
 Comment=Write Disk Images to Devices
 Exec=mate-disks --restore-disk-image %U
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!

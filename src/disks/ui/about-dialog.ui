@@ -8,16 +8,17 @@
     <property name="modal">True</property>
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">dialog</property>
-    <property name="program_name" translatable="yes">Disks</property>
+    <property name="program_name" translatable="yes">MATE Disks</property>
     <property name="copyright" translatable="yes">Copyright © 2008-2013 Red Hat, Inc.
 Copyright © 2008-2013 David Zeuthen
 Copyright © 2009-2017 The GNOME Project
+Copyright © 2021 Robert Buj
 </property>
     <property name="comments" translatable="yes">View, modify and configure disks and media</property>
-    <property name="website">https://wiki.gnome.org/Apps/Disks</property>
+    <property name="website">https://github.com/rbuj/mate-disk-utility</property>
     <property name="authors">David Zeuthen</property>
     <property name="translator_credits" translatable="yes">translator-credits</property>
-    <property name="logo_icon_name">org.mate.DiskUtility</property>
+    <property name="logo_icon_name">drive-harddisk</property>
     <property name="license_type">gpl-2-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
@@ -43,4 +44,3 @@ Copyright © 2009-2017 The GNOME Project
     </child>
   </object>
 </interface>
-

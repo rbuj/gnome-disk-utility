@@ -1,8 +1,3 @@
-install_subdir(
-  'icons/hicolor',
-  install_dir: gdu_datadir / 'icons',
-)
-
 desktops = [
   'org.mate.DiskUtility.desktop',
   'mate-disk-image-writer.desktop',

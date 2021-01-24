@@ -1,13 +1,13 @@
 [Desktop Entry]
-Name=Disks
+Name=MATE Disks
 Comment=Manage Drives and Media
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 Keywords=disk;drive;volume;harddisk;hdd;disc;cdrom;dvd;partition;iso;image;backup;restore;benchmark;raid;luks;encryption;S.M.A.R.T.;smart;
 Exec=mate-disks
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=org.mate.DiskUtility
+Icon=drive-harddisk
 Terminal=false
 Type=Application
 StartupNotify=true
-Categories=GNOME;GTK;Utility;X-GNOME-Utilities;
+Categories=GTK;System;Filesystem;
 DBusActivatable=true
